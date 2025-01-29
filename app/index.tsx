@@ -1,13 +1,18 @@
 import MyButton from "@/components/MyButton";
+import { useRouter } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
-import Login from "./login";
 
 export default function HomeScreen() {
+  const route = useRouter();
+  const onContinue = () => {
+    route.navigate("/login");
+  };
+
   return (
     <View style={styles.container}>
       <Text>Welcome to basic login and signup project</Text>
 
-      <MyButton title={"Login"} />
+      <MyButton title={"Login"} onPress={onContinue} />
     </View>
   );
 }
