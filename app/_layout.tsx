@@ -1,6 +1,6 @@
 import { Stack } from "expo-router";
 
-export default function RootLayout() {
+export default function Layout() {
   return (
     <Stack
       screenOptions={{
@@ -13,19 +13,10 @@ export default function RootLayout() {
         },
       }}
     >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="index" />
-      <Stack.Screen
-        name="details2"
-        options={{
-          title: "My custom heading from layout for details2",
-          headerStyle: { backgroundColor: "black" },
-          headerTintColor: "#fff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
-      />
+      {/* Optionally configure static options outside the route.*/}
+      <Stack.Screen name="index" options={{ title: "Home" }} />
+      <Stack.Screen name="login" options={{ title: "Login" }} />
+      <Stack.Screen name="signup" options={{ title: "Signup" }} />
     </Stack>
   );
 }
