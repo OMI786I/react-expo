@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 10,
+    alignItems: "center",
   },
   text: {
     color: "white",

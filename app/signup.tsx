@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import React from "react";
 import MyButton from "@/components/MyButton";
 import { useRouter } from "expo-router";
@@ -10,9 +10,13 @@ const Signup = () => {
   };
   return (
     <View style={styles.container}>
-      <Text>signup</Text>
+      <Image style={styles.image} source={require("@/assets/register.jpg")} />
 
-      <MyButton title={"login Now"} onPress={toLogin} />
+      <View style={{ padding: 10, gap: 10 }}>
+        <TextInput placeholder="Enter your Email" style={styles.input} />
+        <TextInput placeholder="Enter your Password" style={styles.input} />
+        <MyButton title={"login Now"} onPress={toLogin} />
+      </View>
     </View>
   );
 };
@@ -20,9 +24,15 @@ const Signup = () => {
 export default Signup;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  container: {},
+  image: {
+    width: "100%",
+    height: 200,
+  },
+  input: {
+    borderWidth: 1,
+    height: 50,
+    paddingHorizontal: 20,
+    borderRadius: 10,
   },
 });
