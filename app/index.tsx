@@ -1,3 +1,4 @@
+import FlatListCheck from "@/components/FlatListCheck";
 import MyButton from "@/components/MyButton";
 import { useRouter } from "expo-router";
 import { View, Text, StyleSheet } from "react-native";
@@ -13,6 +14,8 @@ export default function HomeScreen() {
       <Text>Welcome to basic login and signup project</Text>
 
       <MyButton title={"Login"} onPress={onContinue} />
+
+      <FlatListCheck />
     </View>
   );
 }
